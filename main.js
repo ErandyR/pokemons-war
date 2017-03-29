@@ -29,18 +29,17 @@ function crearPokemon(){
 
 function mostrarPokemonsPrimerSelect(){
   var selectUnoDePokemons = document.getElementById("primerSelect");
-
+  selectUnoDePokemons.innerHTML = "";
   pokemons.forEach(function (pokemon){
     var option = document.createElement("option");
     option.innerText = pokemon.nombre;
     selectUnoDePokemons.appendChild(option);
-
   });
 
 }
 function mostrarPokemonsSegundoSelect(){
   var selectDosDePokemons = document.getElementById("segundoSelect");
-
+  selectDosDePokemons.innerHTML = "";
   pokemons.forEach(function (pokemon){
     var option = document.createElement("option");
     option.innerText = pokemon.nombre;
