@@ -3,7 +3,9 @@ function Pokemon(nombre, color, puntosAtaque){
   this.color = color;
   this.puntosAtaque = puntosAtaque;
   this.vida = 100;
-
+  this.pelear = function(pokemonObjeto){
+  pokemonObjeto.vida = pokemonObjeto.vida - this.puntosAtaque
+  }
 }
 var pokemons = [];
 
@@ -20,6 +22,9 @@ function crearPokemon(){
   pokemons.push(pokemon);
   mostrarPokemonsPrimerSelect();
   mostrarPokemonsSegundoSelect();
+  nombrePokemon.value = "";
+  colorPokemon.value = "";
+  puntosAtaque.value = "";
 }
 
 function mostrarPokemonsPrimerSelect(){
@@ -43,5 +48,9 @@ function mostrarPokemonsSegundoSelect(){
 
   });
 }
+function pelearPokemon(){
 
+  primerPokemon.pelear(objetoPokemon);
+  console.log(primerPokemon);
+}
 //Obtener el valor de un select/option
